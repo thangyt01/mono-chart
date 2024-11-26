@@ -9,6 +9,6 @@ entries:
     name: kapp
     type: application
     urls:
-    - https://thangyt00.github.io/mono-chart/kapp-0.1.0.tgz
+    - https://thangyt01.github.io/mono-chart/kapp-0.1.0.tgz
     version: 0.1.0
 generated: "2024-11-26T19:59:02.2603502+07:00"
