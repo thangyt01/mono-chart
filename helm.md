@@ -24,4 +24,15 @@ helm dependency update ci/demo-app
 # install chart
 helm install <release-name> ci/demo-app
 helm install demo-app ci/demo-app
+
+helm list -a
+
+# upgrade chart
+helm upgrade demo-app ci/demo-app
+
+# rollback
+helm rollback demo-app 2
+
+# uninstall chart
+helm uninstall demo-app
 ```
