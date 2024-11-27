@@ -1,0 +1,6 @@
+dependencies:
+- name: kapp
+  repository: https://thangyt01.github.io/mono-chart
+  version: 0.1.0
+digest: sha256:516a84b1425a6de1ce0d5a5154b8abf60ce4e577ade3a1f32e88f64dd7a3a72a
+generated: "2024-11-27T21:10:28.0174118+07:00"
