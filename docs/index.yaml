@@ -3,12 +3,22 @@ entries:
   kapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-11-26T19:59:02.2631866+07:00"
+    created: "2024-11-27T20:54:13.0766322+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 6420b919e1e991ad52fd089619f8d5c20003a41bb0c149acf6caf0005925e1aa
+    name: kapp
+    type: application
+    urls:
+    - kapp-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-27T20:54:13.0859542+07:00"
     description: A Helm chart for Kubernetes
     digest: b27e8536a1a7922572e180b71077643d362482c66e20febb49e94e45b1a247e9
     name: kapp
     type: application
     urls:
-    - https://thangyt01.github.io/mono-chart/kapp-0.1.0.tgz
+    - docs/kapp-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-26T19:59:02.2603502+07:00"
+generated: "2024-11-27T20:54:13.0745278+07:00"
