@@ -3,9 +3,9 @@ entries:
   kapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-11-30T00:24:39.6838722+07:00"
+    created: "2024-11-30T00:39:35.1411996+07:00"
     description: A Helm chart for Kubernetes
-    digest: ae2fc75f2e9821b27a6fe8862988a4eab98bc4da8ce3c4511051baf9b447ace7
+    digest: 6d9f12797e311d869ccc2123a87d87f29a11126adcbd0504f0df585c0f5fc285
     name: kapp
     type: application
     urls:
@@ -13,12 +13,12 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-11-30T00:24:39.6845498+07:00"
+    created: "2024-11-30T00:39:35.1419477+07:00"
     description: A Helm chart for Kubernetes
-    digest: ee118676e18f0dcfe3ffbd356e0d784c70d45ff2474f3142ccd1225161d598c3
+    digest: ae2fc75f2e9821b27a6fe8862988a4eab98bc4da8ce3c4511051baf9b447ace7
     name: kapp
     type: application
     urls:
     - docs/kapp-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-30T00:24:39.6829828+07:00"
+generated: "2024-11-30T00:39:35.14035+07:00"

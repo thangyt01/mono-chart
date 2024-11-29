@@ -1,15 +1,18 @@
+{{- if .Values.service.enabled -}}
+{{- $fullName := include "kapp.fullname" . -}}
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "kapp.fullname" . }}
+  name: {{ printf "%s-%s" $fullName "svc" }}
   labels:
     {{- include "kapp.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: {{ .Values.service.protocol | default "TCP" }}
       name: http
   selector:
     {{- include "kapp.selectorLabels" . | nindent 4 }}
+{{- end }}
