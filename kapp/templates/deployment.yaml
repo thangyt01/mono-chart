@@ -47,18 +47,31 @@ spec:
             - name: VERSION_TAG
               value: {{ .Values.image.tag | quote }}
             {{- end }}
+          {{- if .Values.service.enabled }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
-              protocol: TCP
+              containerPort: {{ .Values.service.targetPort }}
+              protocol: {{ .Values.service.protocol | default "TCP" }}
+          {{- end }}
+          {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             httpGet:
-              path: /_healthcheck
-              port: http
+              path: {{ .Values.livenessProbe.path | default "/" }}
+              port: {{ .Values.service.targetPort }}
+            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
+            successThreshold: {{ .Values.livenessProbe.successThreshold }}
+            failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
           readinessProbe:
             httpGet:
-              path: /_healthcheck
-              port: http
+              path: {{ .Values.livenessProbe.path | default "/" }}
+              port: {{ .Values.service.targetPort }}
+            initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
+            successThreshold: {{ .Values.readinessProbe.successThreshold }}
+            failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
